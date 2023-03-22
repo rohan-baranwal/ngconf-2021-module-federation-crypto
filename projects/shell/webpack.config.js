@@ -6,7 +6,7 @@ const share = mf.share;
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
-  [/* mapped paths to share */]);
+  ['wallet-lib']);
 
 module.exports = {
   output: {
@@ -33,7 +33,7 @@ module.exports = {
 
       // For hosts (please adjust)
       remotes: {
-        "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+        // "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
 
       },
 
