@@ -5,5 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class WalletLibService {
 
-  constructor() { }
+  private balanceAmount = 1000;
+  public get balance(): number {
+    return this.balanceAmount;
+  }
+  constructor() {
+  }
+  public purchase(purchaseAmount: number): void {
+    this.balanceAmount = this.balanceAmount - purchaseAmount;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WalletLibService } from 'wallet-lib';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  balance = 0;
+
+  constructor(
+    private walletService: WalletLibService
+  ) {
+    this.balance = this.walletService.balance;
+   }
 
   ngOnInit() {
   }
